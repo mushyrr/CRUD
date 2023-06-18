@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+      
+    <div class="container">
+        
+    <div class="containe">
+        <input id="checkbox" name="checkbox" type="checkbox">
+        <label class="label" for="checkbox">
+                  </label>
+      
+      </div>
+      
+        <div class="title">
+            <h1>my cruds</h1>
+        </div>
+        <div class="inputs">
+            <input type="text" class="inputTitle" placeholder="product name">
+            <div class="totalPrice">
+                <input type="number" class="price" placeholder="price">
+                <input type="number" class="taxes" placeholder="taxes">
+                <input type="number" class="cuont" placeholder="cuont *">
+            </div>
+
+            <div class="totalBox">total: <span class="total"></span></div>
+            
+            <div class="mybtns">
+                <button class="creat btn">Create</button>
+                <div class="sear">
+                    <input type="search" class="search">
+                </div>
+                <div id="myDeleteAll">
+                    
+                </div>
+            </div>
+            <table>
+                <tr class="flexR">
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>total</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

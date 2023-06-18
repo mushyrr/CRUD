@@ -1,0 +1,213 @@
+:root {
+    --dark-color:  rgb(24, 23, 23);
+    --light-color: white;
+    --main-color: rgb(80, 68, 90);
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content:center ;
+    background-color: var(--dark-color);
+}
+.title{
+    color: var(--light-color);
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 70vw;
+
+}
+.inputTitle , .search{
+    width: 100%;
+}
+input{
+    height: 32px;
+    text-align: center;
+    border-radius: 12px;
+    margin: 3px;
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+.totalPrice{
+    display: flex;
+    justify-content: space-between;
+}
+.totalBox{
+    padding: 7px;
+    border-radius:8px ;
+    background-color: rgb(119, 16, 16);
+    color: white;
+}
+.mybtns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: chocolate;
+    color: var(--light-color);
+    transition: .5s;
+}
+.btn:hover{
+    background-color: red;
+    letter-spacing: 1px;
+}
+
+table{
+    margin:0 25px;
+    color: white;
+    display: inline-block;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+tr th {
+    text-transform: uppercase;
+    color: var(--light-color);
+
+}
+.flexR{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+#update ,#delete{
+    background-color: var(--main-color);
+    width: 68px;
+    height: 40px;
+    padding-top:8px ;
+    border-radius: 15px;
+    transition: .5s;
+    text-align: center;
+    display: inline-block;
+}
+#delete{
+    background-color: rgb(129, 31, 31);
+}
+#delete:hover{
+    letter-spacing: 1px;
+    background-color: rgb(194, 21, 21);
+}
+#update:hover{
+letter-spacing: 1px;
+background-color: blueviolet;
+}
+.done{
+    background-color: green;
+}
+.deleteAll{
+    width: 100%;
+
+}
+.deleteAll:focus{
+    background-color: blue;
+}
+
+.none{
+    display: none;
+}
+
+
+@media (max-width: 743px){
+    .totalPrice{
+        flex-direction: column;
+    }
+    tr th{
+        text-transform: lowercase;
+    }
+    
+    #update ,#delete{
+        background-color: var(--main-color);
+        width: 40px;
+        height: 30px;
+        font-size: small;
+    }
+
+}
+
+.containe{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.label {
+  height: 45px;
+  width: 90px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  -webkit-box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.label:hover {
+  -webkit-transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+  transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+}
+
+#checkbox:checked ~ .label:hover {
+  -webkit-transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+  transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ .label::before {
+  left: 48px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 70%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.label::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #000000;
+  background-image: linear-gradient(
+    130deg,
+    #757272 10%,
+    #ffffff 11%,
+    #726f6f 62%
+  );
+  left: 10px;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
